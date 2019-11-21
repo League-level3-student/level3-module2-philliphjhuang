@@ -16,6 +16,7 @@ public class BubbleSorter extends Sorter{
 					int sub = array[i];
 					array[i] = array[i+1];
 					array[i+1] = sub;
+					display.updateDisplay();
 				}
 			}
 		}
