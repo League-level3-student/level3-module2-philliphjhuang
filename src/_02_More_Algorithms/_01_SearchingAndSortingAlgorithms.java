@@ -14,6 +14,9 @@ public class _01_SearchingAndSortingAlgorithms {
 	 **/
 
 	/* 1. Create a method that will find and return the first index of a broken egg */
+	public static int findBrokenEgg() {
+		return 0;
+	}
 	@Test
 	public void testSearch() {
 		List<String> eggs = Arrays.asList(new String[] { "whole", "whole", "whole", "whole", "cracked", "whole", "whole", "whole",
