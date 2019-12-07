@@ -21,5 +21,4 @@ public class BubbleSorter extends Sorter{
 			}
 		}
 	}
-	
 }
