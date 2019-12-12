@@ -1,5 +1,6 @@
 package _02_More_Algorithms;
 
+import java.util.Collections;
 import java.util.List;
 
 public class Algorithms {
@@ -62,19 +63,36 @@ public class Algorithms {
 		return bool;
 	}
 
-	public static Double sortScores(List<Double> results) {
-		double doub = 0.0;
-		
-		results.sort(c);
-		return doub;
+	public static List<Double> sortScores(List<Double> results) {
+		for(int i = 0; i < results.size(); i++) {
+			for(int j = i; j>0 ;j--) {
+				if(results.get(j)<results.get(j-1)) {
+					Collections.swap(results,j,j-1);
+				}
+			}
+		}
+		return results;
 	}
 	
+	public static List<String> sortDNA(List<String> unsortedSequences){
+		for(int i = 0; i < unsortedSequences.size();i++) {
+			for(int j = i; j > 0; j--) {
+				if(unsortedSequences.get(j).length()<unsortedSequences.get(j-1).length()) {
+					Collections.swap(unsortedSequences, j, j-1);
+				}
+			}
+		}
+		return unsortedSequences;
+	}
 	
-	
-	
-	
-	
-	
-	
-	
+	public static List<String> sortWords(List<String> words) {
+		for(int i = 0; i < words.size();i++) {
+			for(int j = i; j > 0; j--) {
+				if(words.get(j).compareTo(words.get(j-1))<0) {
+					Collections.swap(words, j, j-1);
+				}
+			}
+		}
+		return words;
+	}
 }
